@@ -42,7 +42,7 @@ let caca = {
 
         //add method
         SebutkanHobby : function() {
-            console.log("Hobby caca :\n" + "1."+ this.Hobby[0] + "\n2." + this.Hobby[1]);
+            console.log('Hobby caca :\n1. ' + this.Hobby[0] + '\n2. ' + this.Hobby[1]);
         }
 }
 
