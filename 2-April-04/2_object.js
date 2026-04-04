@@ -1,30 +1,20 @@
-function hello() {
-  console.log("Hello, Selamat Pagi!");
-}
-
-hello();
-
-
+let buah = ["Durian", 7500, true];
 /**
-buat 2 fungsi yg
-kalimat jd larik(array) 
-element dlm  "Hello selamat pagi" dan memberi hasil 3
-*/
+ * buat functin
+ * Menjadi object
+ * {
+ * Jenis : "Durian",
+ * Harga : 7500,
+ * Enak  : true
+ * }
+ */
 
-function TextToArray(text) {
-    let array = text.split(" ");
-    return array;
+function buahObject(array) {
+    let result = {};
+    result.Jenis = array[0];
+    result.Harga = array[1];
+    result.Enak = array[2];
+    return result;
 }
 
-let contohText = TextToArray("Hello selamat pagi");
-console.log(contohText);
-console.log(contohText.length);
-
-
-function jumlahKata(text) {
-    let array = TextToArray(text);
-    return array.length;
-}
-let jumlah = jumlahKata("Hello selamat pagi");
-console.log(jumlah);
-
+console.log(buahObject(buah));
