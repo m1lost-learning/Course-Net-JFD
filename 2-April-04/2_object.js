@@ -18,3 +18,33 @@ function buahObject(array) {
 }
 
 console.log(buahObject(buah));
+
+// Methode Object
+
+let mobil = {
+    name : "Civic",
+    cc : 5000,
+
+    //add method
+    StartEngine : function() {
+        console.log("Mesin menyala");
+    }
+}
+
+console.log(mobil);
+mobil.StartEngine();
+
+let caca = {
+    Nama : "Caca",
+    Berat : "45 Kg",
+    Tinggi : "155 Cm",
+    Hobby : ["Nonton", "Makan"],
+
+        //add method
+        SebutkanHobby : function() {
+            console.log("Hobby caca :\n" + "1."+ this.Hobby[0] + "\n2." + this.Hobby[1]);
+        }
+}
+
+console.log(caca);
+caca.SebutkanHobby();
