@@ -90,8 +90,49 @@ class Designer extends Person {
 }
 
 const programmer = new Programmer(1, "Joko", 28, "Programmer", "Jakarta");
-const designer = new Designer(2, "Yuni", 17, "Designer", "Sukabumi");
+const designer = new Designer(1, "Yuni", 17, "Designer", "Sukabumi");
 
 console.log(programmer); // Output: Programmer { id: 1, name: 'Joko', age: 28, job: 'Programmer', city: 'Jakarta' }
 console.log(designer); // Output: Designer { id: 2, name: 'Yuni', age: 17, job: 'Designer', city: 'Sukabumi' }  
+
+
+class Office {
+    constructor(division) {
+        this.division = division || [];
+    }
+
+    showEmployees() {
+        console.log(this.division);
+    }
+
+    addEmployee(name, age, job, city) {
+        let id;
+        if (this.division.length === 0) {
+            id = 1;
+        } else {
+            id = Math.max(...this.division.map(emp => emp.id)) + 1;
+        }
+        let employee = new Person(id, name, age, job, city);
+        this.division.push(employee);
+
+        switch (job) {
+            case "programmer":
+                this.division.push(new Programmer(id, name, age, job, city));
+                break;
+            case "designer":
+                this.division.push(new Designer(id, name, age, job, city));
+                break;
+            default:
+                console.log(`Job ${job} tidak dikenali.`);
+        }
+
+        console.log(`Employee ${name} added to the office.`);
+
+    }
+}
+
+const office = new Office();
+office.addEmployee("Rani", 28, "programmer", "Jakarta");
+office.addEmployee("Muliya", 17, "designer", "Sukabumi");
+office.showEmployees(); // Output: [ Person { id: 1, name: 'Rani', age: 28, job: 'programmer', city: 'Jakarta' }, Programmer { id: 1, name: 'Rani', age: 28, job: 'programmer', city: 'Jakarta' }, Person { id: 2, name: 'Muliya', age: 17, job: 'designer', city: 'Sukabumi' }, Designer { id: 2, name: 'Muliya', age: 17, job: 'designer', city: 'Sukabumi' } ]
 
