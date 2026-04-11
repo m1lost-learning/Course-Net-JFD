@@ -105,6 +105,7 @@ class Office {
         console.log(this.division);
     }
 
+    //Add Employee
     addEmployee(name, age, job, city) {
         let id;
         if (this.division.length === 0) {
@@ -129,10 +130,33 @@ class Office {
         console.log(`Employee ${name} added to the office.`);
 
     }
+
+    //Update Employee
+    updateEmployee(id, name, age, job, city) {
+        this.division = this.division.map(division => {
+            if (division.id === id) {
+                return new Person(id, name, age, job, city);
+            }
+            return division;
+        });
+    }
+
+
+    //Delete Employee
+    deleteEmployee(id) {
+        this.division = this.division.filter(division => division.id !== id);
+        console.log(`Employee with id ${id} has been deleted.`);
+    }
 }
 
 const office = new Office();
 office.addEmployee("Rani", 28, "programmer", "Jakarta");
 office.addEmployee("Muliya", 17, "designer", "Sukabumi");
 office.showEmployees(); // Output: [ Person { id: 1, name: 'Rani', age: 28, job: 'programmer', city: 'Jakarta' }, Programmer { id: 1, name: 'Rani', age: 28, job: 'programmer', city: 'Jakarta' }, Person { id: 2, name: 'Muliya', age: 17, job: 'designer', city: 'Sukabumi' }, Designer { id: 2, name: 'Muliya', age: 17, job: 'designer', city: 'Sukabumi' } ]
+
+office.updateEmployee(1, "Jokox", 28, "Programmer", "Jakarta");
+office.showEmployees(); 
+
+office.deleteEmployee(1);
+office.showEmployees(); // Output: [ Person { id: 2, name: 'Muliya', age: 17, job: 'designer', city: 'Sukabumi' }, Designer { id: 2, name: 'Muliya', age: 17, job: 'designer', city: 'Sukabumi' } ]
 
