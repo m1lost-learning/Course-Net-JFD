@@ -13,12 +13,13 @@ const product= [
     price: 500
     },
     {
-    name: "monitor",
+    name: "Monitor",
     price: 3000
     }
 
 ];
  
+// function filter
 const productFilter = product.filter(
     function(item){ 
         return item.price > 1000;
@@ -28,9 +29,21 @@ const productFilter = product.filter(
 console.log(productFilter);
 console.log();
 
-productFilter.forEach((item) => {
-    console.log(item.name);
+// function forEach
+productFilter.forEach((item, index) => {
+    console.log(`${index + 1}. ${item.name}`);
 });
-
 console.log();
+
 console.log(product[0].name);
+console.log();
+
+// function map
+const productMap = product.map(
+    function(item){
+        return item.name;
+    }
+);
+
+console.log(productMap);
+console.log();
