@@ -2,26 +2,26 @@
 const product= [
     { 
     name: "Laptop",
-    harga: 15000
+    price: 15000
     },
     {
-    name: "Maouse",
-    harga: 200
+    name: "Mouse",
+    price: 200
     },
     {
     name: "Keyboard",
-    harga: 500
+    price: 500
     },
     {
     name: "monitor",
-    harga: 3000
+    price: 3000
     }
 
 ];
  
 const productFilter = product.filter(
     function(item){ 
-        return item.harga > 1000;
+        return item.price > 1000;
     }
 );
 
