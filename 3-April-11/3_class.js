@@ -30,6 +30,7 @@ vehicle.stopEngine(); // Output: CIVIC Mematikan Mesin.
 // 3. Polymorphism
 // 4. Abstraction
 
+// Encapsulation
 class Student {
     #nama; // private field
     gpa; // Not private field
@@ -63,4 +64,34 @@ student.setName("Yuni Setiawan");
 student.setGpa(3.8);
 console.log(student.getName()); // Output: Yuni Setiawan
 console.log(student.getGpa()); // Output: 3.8
+
+//Inheritance
+
+class Person {
+    constructor(id, name, age, job, city) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.job = job;
+        this.city = city;
+    }
+}
+
+class Programmer extends Person {
+    constructor(id, name, age, job, city) {
+        super(id, name, age, job, city);
+    }
+}
+
+class Designer extends Person {
+    constructor(id, name, age, job, city) {
+        super(id, name, age, job, city);
+    }
+}
+
+const programmer = new Programmer(1, "Joko", 28, "Programmer", "Jakarta");
+const designer = new Designer(2, "Yuni", 17, "Designer", "Sukabumi");
+
+console.log(programmer); // Output: Programmer { id: 1, name: 'Joko', age: 28, job: 'Programmer', city: 'Jakarta' }
+console.log(designer); // Output: Designer { id: 2, name: 'Yuni', age: 17, job: 'Designer', city: 'Sukabumi' }  
 
