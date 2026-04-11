@@ -35,6 +35,7 @@ productFilter.forEach((item, index) => {
 });
 console.log();
 
+// view by index
 console.log(product[0].name);
 console.log();
 
