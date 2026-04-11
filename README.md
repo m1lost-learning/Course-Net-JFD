@@ -7,6 +7,7 @@
 - Array
 - Function
 - Object
+- Declaration
 
 ## Struktur
 - 1-Maret-29 → Basic JavaScript
