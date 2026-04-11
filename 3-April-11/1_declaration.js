@@ -48,3 +48,9 @@ const productMap = product.map(
 
 console.log(productMap);
 console.log();
+
+productMap.forEach((item, index) => {
+    console.log(`${index + 1}. ${item}`);
+});
+console.log();
+
