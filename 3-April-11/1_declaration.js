@@ -26,10 +26,11 @@ const productFilter = product.filter(
 );
 
 console.log(productFilter);
-
+console.log();
 
 productFilter.forEach((item) => {
     console.log(item.name);
 });
 
+console.log();
 console.log(product[0].name);
