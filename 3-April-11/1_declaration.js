@@ -27,4 +27,9 @@ const productFilter = product.filter(
 
 console.log(productFilter);
 
+
+productFilter.forEach((item) => {
+    console.log(item.name);
+});
+
 console.log(product[0].name);
