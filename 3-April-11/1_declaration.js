@@ -26,3 +26,5 @@ const productFilter = product.filter(
 );
 
 console.log(productFilter);
+
+console.log(product[0].name);
