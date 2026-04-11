@@ -3,3 +3,5 @@
 const user = { name: 'Joko', age: 28 };
 const { name, age } = user;
 
+console.log(name); // Output: Joko
+console.log(age);  // Output: 28    
