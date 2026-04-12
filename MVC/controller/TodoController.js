@@ -21,6 +21,10 @@ class TodoController {
     static edit(params) {
         ToDo.edit(params);
     }
-    
+
+    static delete(params) {
+        ToDo.delete(params);
+    }
+
 }
 module.exports = TodoController;

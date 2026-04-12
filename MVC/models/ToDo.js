@@ -46,5 +46,14 @@ class ToDo{
         // write data json/save data json
         fs.writeFileSync('./data.json', JSON.stringify(datas, null, 2));
     }
+
+    static delete(params) {
+        let datas = this.getTodo();
+        const id = params[0];
+        datas = datas.filter(data => data.id != id); 
+     
+        // write data json/save data json
+        fs.writeFileSync('./data.json', JSON.stringify(datas, null, 2));
+    }
 }
 module.exports = ToDo;
