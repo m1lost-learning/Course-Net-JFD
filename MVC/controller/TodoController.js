@@ -17,5 +17,10 @@ class TodoController {
     static add(params) {
         ToDo.add(params);
     }
+
+    static edit(params) {
+        ToDo.edit(params);
+    }
+    
 }
 module.exports = TodoController;

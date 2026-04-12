@@ -22,10 +22,12 @@ switch(command) {
     case 'add':
         TodoController.add(params);
         break;
-    case 'edit':     
+    case 'edit':
+        TodoController.edit(params);     
         break;
     case 'delete':
-        break;  
+        TodoController.delete(params);
+        break;
     default:
         console.log('Selamat Datang');
         break;
