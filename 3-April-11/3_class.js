@@ -157,6 +157,6 @@ office.showEmployees(); // Output: [ Person { id: 1, name: 'Rani', age: 28, job:
 office.updateEmployee(1, "Jokox", 28, "Programmer", "Jakarta");
 office.showEmployees(); 
 
-office.deleteEmployee(1);
+office.deleteEmpcdloyee(1);
 office.showEmployees(); // Output: [ Person { id: 2, name: 'Muliya', age: 17, job: 'designer', city: 'Sukabumi' }, Designer { id: 2, name: 'Muliya', age: 17, job: 'designer', city: 'Sukabumi' } ]
 
