@@ -3,5 +3,15 @@
         "id" : 1,
         "task" : "Belajar JavaScript",
         "status" : true
+    },
+    {
+        "id" : 2,
+        "task" : "Belajar PHP",
+        "status" : false
+    },
+    {
+        "id" : 3,
+        "task" : "Belajar Python",
+        "status" : true
     }
 ]

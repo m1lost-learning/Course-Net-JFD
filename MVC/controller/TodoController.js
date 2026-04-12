@@ -8,10 +8,10 @@ class TodoController {
 
     static show() {
         //request data dari model
-        const todo = ToDo.getTodo();
+        const datas = ToDo.getTodo();
 
         //response data ke view
-        View.show(todo);
+        View.show(datas);
     }
 }
 module.exports = TodoController;

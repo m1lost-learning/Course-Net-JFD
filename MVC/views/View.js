@@ -3,15 +3,16 @@ class View {
         console.log('Task List :');
     }
 
-    static show(todos) {
-     todos.forEach((todo) =>{
-            if(todo.status){
-                console.log(`${todo.id}. [x] ${todo.task}`);
+    static show(datas) {
+     datas.forEach((data) =>{
+            const { id, task } = data;
+
+            if(data.status){
+                console.log(`${id}. [x] ${task}`);
             }else{
-                console.log(`${todo.id}. [ ] ${todo.task}`);
+                console.log(`${id}. [ ] ${task}`);
             }
-        }) 
-            
+        })   
     }
      
 }

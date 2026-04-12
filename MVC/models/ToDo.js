@@ -9,12 +9,12 @@ class ToDo{
 
     static getTodo() {
         // read data json
-        let todo = JSON.parse(fs.readFileSync('./data.json', 'utf-8'));
-        todo = todo.map(todo => {
-            const {id, task, status} = todo;
+        let getData = JSON.parse(fs.readFileSync('./data.json', 'utf-8'));
+        let datas = getData.map(getData => {
+            const {id, task, status} = getData;
             return new ToDo(id, task, status);
         });
-        return todo;
+        return datas;
     }   
 }
 
