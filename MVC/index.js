@@ -28,6 +28,9 @@ switch(command) {
     case 'delete':
         TodoController.delete(params);
         break;
+    case 'changeStatus': //toogle status
+        TodoController.changeStatus(params);
+        break;
     default:
         console.log('Selamat Datang');
         break;

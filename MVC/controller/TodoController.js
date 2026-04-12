@@ -1,5 +1,6 @@
 const View = require('../views/view');
 const ToDo = require('../models/ToDo');
+const { todo } = require('node:test');
 
 class TodoController {
     static help() {
@@ -24,6 +25,10 @@ class TodoController {
 
     static delete(params) {
         ToDo.delete(params);
+    }
+
+    static changeStatus(params) {
+        ToDo.changeStatus(params);
     }
 
 }

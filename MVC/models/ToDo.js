@@ -34,12 +34,10 @@ class ToDo{
         let datas = this.getTodo();
         const id = params[0];
         let task = params[1];
-        let status = params[2] !== undefined ? params[2] === 'true' : undefined;
 
         datas = datas.map(data => {
             if(data.id == id) {
                 data.task = task || data.task;
-                if (status !== undefined) {data.status = status;}
             }
             return data;
         });
@@ -57,6 +55,23 @@ class ToDo{
         // write data json/save data json
         fs.writeFileSync('./data.json', JSON.stringify(datas, null, 2));
         console.log(`Data dengan id ${id} berhasil dihapus`);
+    }
+
+     //toogle status
+    static changeStatus(params) {
+        let datas = this.getTodo();
+        const id = +params[0];
+
+        datas = datas.map(data => {
+            if(data.id === id) {
+                data.status = !data.status;
+            }
+            return data;
+        });
+
+        // write data json/save data json
+        fs.writeFileSync('./data.json', JSON.stringify(datas, null, 2));
+        console.log(`Status dengan id ${id} berhasil diubah`);
     }
 }
 module.exports = ToDo;
