@@ -13,5 +13,9 @@ class TodoController {
         //response data ke view
         View.show(datas);
     }
+
+    static add(params) {
+        ToDo.add(params);
+    }
 }
 module.exports = TodoController;

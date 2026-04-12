@@ -20,6 +20,7 @@ switch(command) {
         TodoController.show();
         break;
     case 'add':
+        TodoController.add(params);
         break;
     case 'edit':     
         break;
