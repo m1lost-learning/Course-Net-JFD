@@ -27,6 +27,7 @@ class ToDo{
 
         // write data json
         fs.writeFileSync('./data.json', JSON.stringify(datas, null, 2));
+        console.log(`Data dengan id ${id} berhasil ditambahkan`);
     }
 
     static edit(params) {
@@ -45,6 +46,7 @@ class ToDo{
 
         // write data json/save data json
         fs.writeFileSync('./data.json', JSON.stringify(datas, null, 2));
+        console.log(`Data dengan id ${id} berhasil diubah`);
     }
 
     static delete(params) {
@@ -54,6 +56,7 @@ class ToDo{
      
         // write data json/save data json
         fs.writeFileSync('./data.json', JSON.stringify(datas, null, 2));
+        console.log(`Data dengan id ${id} berhasil dihapus`);
     }
 }
 module.exports = ToDo;
