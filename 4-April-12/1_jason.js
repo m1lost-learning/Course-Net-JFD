@@ -1,0 +1,6 @@
+// file system node
+// initialisasi
+
+const fs = require('fs');
+let data = fs.readFileSync('data.json', 'utf-8');
+
