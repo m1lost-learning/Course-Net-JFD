@@ -14,7 +14,6 @@ const TodoController = require('./controller/TodoController');
 
 switch(command) {
     case 'help':
-        console.log('Perintah yang tersedia:');
         TodoController.help();
         break;
     case 'show':

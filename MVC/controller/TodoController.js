@@ -1,4 +1,5 @@
 const View = require('../views/view');
+const ToDo = require('../models/ToDo');
 
 class TodoController {
     static help() {
@@ -7,7 +8,7 @@ class TodoController {
 
     static show() {
         //request data dari model
-        const todo = TogetTodo();
+        const todo = ToDo.getTodo();
 
         //response data ke view
         View.show(todo);

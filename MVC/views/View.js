@@ -1,17 +1,18 @@
-const { todo } = require("node:test");
-
 class View {
     static help() {
         console.log('Task List :');
+    }
 
-        todo.forEach((todo =>{
+    static show(todos) {
+     todos.forEach((todo) =>{
             if(todo.status){
-                console.log(`${id}. [x] ${task}`);
+                console.log(`${todo.id}. [x] ${todo.task}`);
             }else{
-                console.log(`${id}. [ ] ${task}`);
+                console.log(`${todo.id}. [ ] ${todo.task}`);
             }
         }) 
-        );
-     }
+            
+    }
+     
 }
 module.exports = View;
