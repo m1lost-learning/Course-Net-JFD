@@ -31,12 +31,11 @@ exports.updateUser = async (req, res) => {
 }
 
 // delete user
-// exports.deleteUser = async (req, res) => {
-//     const userId = req.params.id;
-//     // Logic to delete user from the database
-//     const result = await db.query('DELETE FROM users WHERE id = $1 RETURNING *', [userId]);
-//     if(result.rows.length === 0) {
-//         return res.status(404).send({ message: 'User not found' });
-//     }
-//     res.json({ message: 'User deleted successfully' });
-// }
+exports.deleteUser = async (req, res) => {
+    const userId = req.params.id;
+    const result = await db.query('DELETE FROM users WHERE id = $1 RETURNING *', [userId]);
+    if(result.rows.length === 0) {
+        return res.status(404).send({ message: 'User not found' });
+    }
+    res.json({ message: 'User deleted successfully' });
+}
