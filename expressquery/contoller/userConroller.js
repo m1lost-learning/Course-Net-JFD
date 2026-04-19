@@ -1,4 +1,11 @@
+const db = require('../db/postgres')
 
+// get all
+// localhost:3000/users/
+exports.getUsers = async(req, res) =>{
+    const result = await db.query("SELECT * FROM users")
+    res.json(result.rows)
+}
 
 
 // get by id
